@@ -1,0 +1,10 @@
+private/
+.env
+.env.*
+node_modules/
+test/
+bot.mjs
+discover.mjs
+inspect.mjs
+notifications.mjs
+scripts/

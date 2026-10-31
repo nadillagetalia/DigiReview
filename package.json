@@ -1,0 +1,32 @@
+{
+  "name": "digireview-endpoint-discovery",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": "24.x" },
+  "scripts": {
+    "build:vercel": "node --check api/index.js",
+    "test": "node --test",
+    "cloud:prepare": "node scripts/vercel-setup.mjs --prepare",
+    "cloud:db": "node scripts/vercel-setup.mjs --db",
+    "cloud:db-check": "node scripts/vercel-setup.mjs --db-check",
+    "cloud:session": "node scripts/vercel-setup.mjs --session",
+    "cloud:webhook": "node scripts/vercel-setup.mjs --webhook",
+    "cloud:check": "node scripts/vercel-setup.mjs --check",
+    "cloud:probe": "node scripts/vercel-setup.mjs --probe",
+    "start": "node bot.mjs",
+    "telegram-check": "node bot.mjs --check",
+    "probe": "node discover.mjs --probe",
+    "discover": "node discover.mjs",
+    "notifications": "node notifications.mjs",
+    "inspect": "node inspect.mjs",
+    "check": "node --check discover.mjs && node --check inspect.mjs && node --check notifications.mjs && node --check bot.mjs"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.2.0",
+    "cheerio": "^1.2.0",
+    "fetch-cookie": "^3.2.0",
+    "playwright": "^1.56.1",
+    "tough-cookie": "^6.0.2"
+  }
+}
