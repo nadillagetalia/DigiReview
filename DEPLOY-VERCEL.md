@@ -51,7 +51,7 @@ endpoint bot sendiri sudah memverifikasi secret.
 
 ## 3. Pindahkan sesi dan aktifkan webhook
 
-Isi `DEPLOYMENT_URL=https://nama-project.vercel.app` di `private/vercel.env`.
+Isi `DEPLOYMENT_URL=https://digireview-ten.vercel.app` di `private/vercel.env`.
 Upload cookie sesi login dari PC:
 
 ```powershell
@@ -78,7 +78,7 @@ yang sudah ada dijadikan baseline. Coba `/status` dan `/cek` di Telegram.
 **Vercel Hobby membatasi cron native sekali sehari.** Agar bot mengecek setiap
 menit, gunakan scheduler HTTP eksternal, misalnya cron-job.org:
 
-- URL: `https://nama-project.vercel.app/api/cron`
+- URL: `https://digireview-ten.vercel.app/api/cron`
 - Method: **GET**
 - Schedule: setiap **1 menit**
 - Header: `Authorization: Bearer NILAI_CRON_SECRET`

@@ -4,3 +4,6 @@ private/
 .env.*
 !.env.example
 .vercel/
+
+.vercel
+.env*
